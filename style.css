@@ -1,0 +1,50 @@
+/*
+gruvbox all the things
+https://github.com/morhetz/gruvbox
+*/
+
+body{
+    background-color: #fbf1c7;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 6vh;
+}
+
+img{
+    width: auto;
+    height: 30vh;
+}
+
+a{
+    font-weight: normal;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+a.red{
+    color: #cc241d;
+}
+a.green{
+    color: #98971a;
+}
+a.yellow{
+    color: #d79921;
+}
+a.blue{
+    color: #458588;
+}
+a.purple{
+    color: #b16286;
+}
+a.aqua{
+    color: #689d6a;
+}
+a.white{
+    color: #fbf1c7;
+}
+a.black{
+    color: #3c3836;
+}
