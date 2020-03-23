@@ -6,7 +6,7 @@
     font-family: 'fira-sans';
     src: url('firasans-bold-webfont.woff2') format('woff2'),
          url('firasans-bold-webfont.woff') format('woff');
-    font-weight: normal;
+    font-weight: 700;
     font-style: normal;
 
 }
@@ -18,7 +18,7 @@
     font-family: 'fira-sans';
     src: url('firasans-bolditalic-webfont.woff2') format('woff2'),
          url('firasans-bolditalic-webfont.woff') format('woff');
-    font-weight: normal;
+    font-weight: 700;
     font-style: italic;
 
 }
@@ -30,7 +30,7 @@
     font-family: 'fira-sans';
     src: url('firasans-italic-webfont.woff2') format('woff2'),
          url('firasans-italic-webfont.woff') format('woff');
-    font-weight: normal;
+    font-weight: 400;
     font-style: italic;
 
 }
@@ -42,7 +42,7 @@
     font-family: 'fira-sans';
     src: url('firasans-regular-webfont.woff2') format('woff2'),
          url('firasans-regular-webfont.woff') format('woff');
-    font-weight: normal;
+    font-weight: 400;
     font-style: normal;
 
 }
