@@ -17,10 +17,10 @@ https://github.com/morhetz/gruvbox
 
 @media (orientation: landscape) {
   html {
-    font-size: 3em
+    font-size: 3em;
   }
   body {
-    width: 60%
+    width: 60%;
   }
   img {
     width: auto;
@@ -67,5 +67,5 @@ a.aqua {
   color: #00ffff;
 }
 a.black {
-  color: #000000
+  color: #000000;
 }
