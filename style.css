@@ -4,10 +4,14 @@ https://github.com/morhetz/gruvbox
 
 @media (orientation: portrait) {
   html {
-    font-size: 10vw;
+    font-size: 8vw;
   }
   body {
-    max-width: 80%
+    max-width: 90%
+  }
+  img {
+    width: 33vw;
+    height: auto;
   }
 }
 
@@ -16,7 +20,11 @@ https://github.com/morhetz/gruvbox
     font-size: 4vw;
   }
   body {
-    max-width: 40%;
+    max-width: 60%;
+  }
+  img {
+    width: auto;
+    height: 33vh;
   }
 }
 
