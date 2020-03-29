@@ -3,6 +3,12 @@ https://github.com/morhetz/gruvbox
 */
 
 @media (orientation: portrait) {
+  html {
+    font-size: 5em;
+  }
+  body {
+    width: 90%;
+  }
   img {
     width: 33vw;
     height: auto;
@@ -10,6 +16,12 @@ https://github.com/morhetz/gruvbox
 }
 
 @media (orientation: landscape) {
+  html {
+    font-size: 3em
+  }
+  body {
+    width: 60%
+  }
   img {
     width: auto;
     height: 33vh;
@@ -20,19 +32,12 @@ html {
   background-color: #ffffff;
   font-family: 'Fira Sans', sans-serif;
   font-weight: normal;
-  font-size: 3em;
   text-align: center;
   padding: 10px;
 }
 
 body {
-  width: 80%;
   margin: auto;
-}
-
-img {
-  width: auto;
-  height: 30vh;
 }
 
 a {
