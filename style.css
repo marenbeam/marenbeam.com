@@ -40,11 +40,18 @@ body {
   margin: auto;
 }
 
+.profile {
+  font-weight: bold;
+}
+
 a {
   text-decoration: none;
 }
 a:hover {
   text-decoration: underline;
+}
+.profile a:hover {
+  text-decoration: none;
 }
 
 
