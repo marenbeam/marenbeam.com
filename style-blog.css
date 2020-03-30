@@ -22,10 +22,17 @@ body {
   margin: auto;
 }
 
+/* I really loved the rainbow border but unfortunately I can't get it to render properly in safari
 pre, blockquote {
   border-left: 1px solid transparent;
   border-image: linear-gradient(to bottom, #ff0000, #00ff00, #ffff00, #0000ff, #ff00ff, #00ffff);
   border-image-slice: 1;
+  padding: 10px;
+}
+*/
+
+pre, blockquote {
+  border-left: 1px solid black;
   padding: 10px;
 }
 
