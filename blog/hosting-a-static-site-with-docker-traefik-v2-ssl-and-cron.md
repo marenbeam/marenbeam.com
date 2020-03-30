@@ -1,25 +1,16 @@
 % Hosting a static site with Docker, Traefik v2, SSL, and cron
 # Hosting a static site with Docker, Traefik v2, SSL, and cron
 
-Just to be clear, this is the strategy I use to host [this website](https://marenbeam.net), ~~but not this blog. This blog is hosted on [write.as](https://write.as)~~. Nevermind! Now I host this blog the same way :)  It was only a matter of time before I fell prey to the allure of [Pandoc](https://pandoc.org/).
+Just to be clear, this is how I host [this website](https://marenbeam.net).
+
+I hope this post might be helpful for someone using Traefik for the first time, someone moving from Traefik v1 to v2, or someone who's getting familiar with docker compose.
 
 ## My use case and constraints
 
-I host a number of long-lived, public-facing (but privately-used) services. They were all hosted on Digital Ocean [Droplets](https://www.digitalocean.com/products/droplets/), but the bills were adding up, and the administration overhead was more than I'd like (I've done a bad job of putting things in [ansible](https://en.wikipedia.org/wiki/Ansible_(software))).
-
-So when I recently moved into a place I'll live long-term, I got a "business class" internet connection, a static IP address, built a tiny server, and started migrating everything from Digital Ocean to a single docker host. The "business class" internet connection costs barely more than the default, and is required for getting a static IP address from my ISP. It probably also has an [SLA](https://en.wikipedia.org/wiki/Service-level_agreement).
-
-I chose docker for a number of reasons, but the main ones are:
-
 * I want to host many different things on one box. Currently, the most [boring](https://mcfunley.com/choose-boring-technology) way to do that is with docker.
 * My previous setup, though technically simple, *felt* overwhelming because I was holding [state](https://en.wikipedia.org/wiki/State_(computer_science)) in my head rather than in text files. Docker would force me to put more system state in text files.
-* Inevitably, I will move to another apartment :(  When that happens, I'll regret everything about the decision I've made to self-host things on a box in my own place -- but it'll be easier to temporarily migrate to a Digital Ocean droplet if necessary.
 
-So that's some of why I decided to do things this way! Before this turns into a post about the 'why' and 'how' of my entire setup, I'll move on to the meat.
-
-## The details
-
-### Parts:
+## Parts:
 
 * Debian installed on the server (hereafter referred to as "the host")
 * Docker installed on the host
@@ -28,9 +19,9 @@ So that's some of why I decided to do things this way! Before this turns into a 
 * [Swarm mode](https://docs.docker.com/engine/swarm/) enabled on the host
 * Automatic deploy/update with GitHub and [cron](https://en.wikipedia.org/wiki/Cron)
 
-**Why swarm mode and traefik?** I’ll touch on that in a future post, where I’ll explore in-depth how and why you might host a single-node docker cluster in swarm mode.
+**Why swarm mode and traefik?** I’ll touch on that in a future post, where I’ll explore how and why you might host a single-node docker cluster in swarm mode.
 
-### Prep:
+## Prep:
 
 * Install Debian on the host, and set up SSH
 * Install [docker](https://docs.docker.com/install/linux/docker-ce/debian/) and [docker compose](https://docs.docker.com/compose/install/#install-compose-on-linux-systems) on the host
@@ -62,7 +53,7 @@ $ vim ~/docker/traefik/docker-compose.yaml
 
 Now we can really start doing stuff!
 
-### Configure traefik
+## Configure traefik
 
 First we're going to set up traefik. Paste this configuration into the file you just opened, and edit as necessary for your use case. At the very least, you'll need to change the email address. I've included comments explaining most lines.
 
@@ -166,7 +157,7 @@ If you see one traefik container running, that's great! You could unplug your se
 
 Now let's configure our actual website.
 
-### Configure the website
+## Configure the website
 
 First let's attack the docker service configuration. Open a new compose file:
 
@@ -231,7 +222,7 @@ If you get a response (or a page) containing only `hello world` -- success!
 
 Now we can do the last step:  setting up automatic deployments with GitHub and cron. If you don't already have a static site you'd like to use for this, you can use [this template](https://github.com/marenbeam/mynamedotcom) to start with.
 
-### Set up automatic deployments
+## Set up automatic deployments
 
 Our end-goal workflow for making changes to our site is:
 
