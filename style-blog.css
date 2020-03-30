@@ -37,7 +37,9 @@ pre, blockquote {
 }
 
 @media (prefers-color-scheme: dark) {
-  border-color: white;
+  pre, blockquote {
+    border-color: white;
+  }
 }
 
 code {
