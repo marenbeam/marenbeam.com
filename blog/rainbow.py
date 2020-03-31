@@ -28,7 +28,6 @@ def rainbowify(text):
 
         rainbow_text += new_text
 
-
     return rainbow_text
 
 if __name__ == '__main__':
