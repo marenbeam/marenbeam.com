@@ -262,7 +262,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ol>
 <p>We’re going to use a cron job running on the host to achieve this. <strong>Yes, this is a pretty funny combination of fancy-pants new tech (traefik, swarm mode, etc.), and timeless old-school tech (cron)</strong>. We <em>could</em> have a deployment pipeline that builds our site into a container for us when we push to master, and then pulls the image from a private container registry. However, such a solution is overengineered for my particular use case. For the most part, the rest of the stuff running on my server is Other People’s Software that I use to collaborate with friends on projects or to <a href="https://github.com/awesome-selfhosted/awesome-selfhosted">self-host</a> things I use in my day-to-day life. That means I’m using other people’s compose files, and pulling other people’s public images – none of which requires setting up my own CI/CD, managing private keys on the host, or managing my own infrastructure outside of the server itself. So I want to avoid overly-complex solutions for hosting an ultra-simple personal website, with the caveat that it needs to be served from docker since that’s what the rest of my setup requires.</p>
 <p>Moving on, we’re going to skip over creating a new repo and just work with <a href="https://github.com/marenbeam/mynamedotcom">this template</a> (which you should absolutely feel free to use for your own website!)</p>
-<p>Assuming you’ve forked my repo, or are otherwise set up with a git repo you’d like to use, now we just need to set up a cron job on our host that’ll <code>pull</code> the repo each hour and copy it into <code>~/docker/mywebsite.com/site</code> for nginx to serve.</p>
+<p>Assuming you’ve forked my repo, or are otherwise set up with a git repo you’d like to use, now we just need to set up a cron job on our host that’ll pull the repo each hour and copy it into <code>~/docker/mywebsite.com/site</code> for nginx to serve.</p>
 <p>First, <strong>SSH into the host</strong>, and:</p>
 <div class="sourceCode" id="cb11"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb11-1" title="1">$ <span class="fu">mkdir</span> ~/cronjobs</a>
 <a class="sourceLine" id="cb11-2" title="2">$ <span class="fu">mkdir</span> ~/.mywebsite.com</a>
@@ -292,7 +292,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><strong>And that’s it!</strong> You’ve now got a single node docker swarm cluster; traefik accepting incoming requests, routing them to the appropriate service, and programmatically handling SSL provisioning and termination; an nginx container serving your static site over https; and a cute little cronjob syncing and deploying all changes merged to <code>master</code> at the top of each hour :)</p>
 <p>Thanks so much for reading!</p>
 <footer>
-last edited on Thu 02 Apr 2020 08:10:51 PM EDT
+last edited on Thu 02 Apr 2020 08:28:03 PM EDT
 <script async defer src="https://www.recurse-scout.com/loader.js?t=9ba46999660e9e2af4e35e19d38328d1"></script>
 <footer>
 </body>

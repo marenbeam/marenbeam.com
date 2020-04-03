@@ -234,7 +234,7 @@ We're going to use a cron job running on the host to achieve this. **Yes, this i
 
 Moving on, we're going to skip over creating a new repo and just work with [this template](https://github.com/marenbeam/mynamedotcom) (which you should absolutely feel free to use for your own website!)
 
-Assuming you've forked my repo, or are otherwise set up with a git repo you'd like to use, now we just need to set up a cron job on our host that'll `pull` the repo each hour and copy it into `~/docker/mywebsite.com/site` for nginx to serve.
+Assuming you've forked my repo, or are otherwise set up with a git repo you'd like to use, now we just need to set up a cron job on our host that'll pull the repo each hour and copy it into `~/docker/mywebsite.com/site` for nginx to serve.
 
 First, **SSH into the host**, and:
 
