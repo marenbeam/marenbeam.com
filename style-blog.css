@@ -16,8 +16,12 @@ body {
   margin: auto;
 }
 
-pre, blockquote {
+.sourceCode {
   background: #eeeeee;
+}
+
+pre {
+  padding: 10px
 }
 
 code {
