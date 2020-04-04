@@ -1,8 +1,36 @@
+@media (orientation: portrait) {
+  html {
+    font-size: 5em;
+  }
+  body {
+    width: 90%;
+  }
+  img {
+    width: 33vw;
+    height: auto;
+  }
+}
+
+@media (orientation: landscape) {
+  html {
+    font-size: 3em;
+  }
+  body {
+    width: 40%;
+  }
+  img {
+    width: auto;
+    height: 33vh;
+  }
+}
+
 html {
   background: #ffffff;
   color: #000000;
+  font-family: sans-serif;
+  font-weight: normal;
   text-align: center;
-  font-size: 4em;
+  padding: 10px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -10,10 +38,13 @@ html {
     background: #000000;
     color: #ffffff;
   }
+  img {
+    filter: invert(100%);
+  }
+}
 
 body {
   margin: auto;
-  max-width: 20ch;
 }
 
 .profile {
