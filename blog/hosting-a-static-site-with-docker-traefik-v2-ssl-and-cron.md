@@ -1,5 +1,5 @@
 % Hosting a static site with Docker, Traefik v2, SSL, and cron
-# Hosting a static site with Docker, Traefik v2, SSL, and cron
+# hosting a static site with docker, traefik v2, ssl, and cron
 
 Just to be clear, this is how I host [this website](https://marenbeam.net).
 

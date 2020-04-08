@@ -4,10 +4,10 @@ import panflute
 
 def action(elem, doc):
     if isinstance(elem, panflute.Header):
-        level = str(elem.level)
-        text = panflute.stringify(elem)
-        rainbow_header = '<h' + level + ' id="' + text + '">' + rainbowify(text) + '</h' + level + '>'
-        return(panflute.RawBlock(rainbow_header))
+        if elem.level == 1:
+            text = panflute.stringify(elem)
+            rainbow_header = '<h1 id="' + text + '">' + rainbowify(text) + '</h1>'
+            return(panflute.RawBlock(rainbow_header))
 
 def rainbowify(text):
     colors = ['<span style="color:#ff0000">', '<span style="color:#00ff00">', '<span style="color:#ffff00">', '<span style="color:#0000ff">', '<span style="color:#ff00ff">', '<span style="color:#00ffff">']
