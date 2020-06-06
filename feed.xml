@@ -9,5 +9,10 @@
     <link>https://maren.hup.is/blog/hosting-a-static-site-with-docker-traefik-v2-ssl-and-cron/</link>
     <description>A tutorial covering how to deploy a static site on Docker using Traefik</description>
   </item>
+  <item>
+    <title>What if I Just Wrote HTML?</title>
+    <link>https://maren.hup.is/blog/what-if-i-just-wrote-html/</link>
+    <description>An essay about discovering how the best way to write HTML is to write HTML</description>
+  </item>
 </channel>
 </rss>
