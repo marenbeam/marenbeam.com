@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/marenbeam
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://maren.hup.is
+  * I am marenbeam (https://keybase.io/marenbeam) on keybase.
+  * I have a public key ASBA6cG-Im_kV30eGUOaHswtryCSjmX1CfrbupC7DHre2go
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0101368befe142dd6fbdc9e43c3e96df47dc24446858d6c137532f983795c79058300a",
+      "host": "keybase.io",
+      "kid": "012040e9c1be226fe4577d1e19439a1ecc2daf20928e65f509fadbba90bb0c7adeda0a",
+      "uid": "6c970ed393ecb8e608619d31102cdd19",
+      "username": "marenbeam"
+    },
+    "merkle_root": {
+      "ctime": 1591834457,
+      "hash": "49be8ef5e82d660db378393eccaf2c699c8ff8fdf0f8e5c2e22cef00d002c9920c92a701215fb7082bba150caa91f8de2070a596d5b9f4d57eecaf6aa7459b11",
+      "hash_meta": "df4038732593e5db4144b64a0ed66b3a9373d6e776ce2aa59da51cdaa5f9bd86",
+      "seqno": 16624130
+    },
+    "service": {
+      "entropy": "U2l6QzO+SSy8PlvXyXNE2KuR",
+      "hostname": "maren.hup.is",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.5.1"
+  },
+  "ctime": 1591834522,
+  "expire_in": 504576000,
+  "prev": "102743cb928e19911df6f78d7d26a34dfd34369b2ad7707c3a141f93512433ef",
+  "seqno": 42,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgQOnBviJv5Fd9HhlDmh7MLa8gko5l9Qn627qQuwx63toKp3BheWxvYWTESpcCKsQgECdDy5KOGZEd9veNfSajTf00Npsq13B8OhQfk1EkM+/EIJlq+MhUKgmy7nnSQTFQtPc0U3YxR6op86pjFRV+M27eAgHCo3NpZ8RAz4V8UVcjgNbfSBwV9u8TnRMGjjfpmOzaWK96fNqlAQWPt73Z4n1DBhyhfitxjAzG2dLrG6Fg3LFxVAP4rIidAqhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIIHeW3x3kjnN707baHBH2g0MtvU+m1hwJlDtOFCi9IaCo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/marenbeam
+
+==================================================================
