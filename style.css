@@ -21,10 +21,7 @@ img.profile {
   width: 10em;
   max-width: 100%;
   height: auto;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 5px;
+  border-radius: 50%;
 }
   
 
