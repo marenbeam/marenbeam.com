@@ -1,5 +1,4 @@
-@import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/inter.min.css");
-@import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/roboto-mono.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto+Mono&display=swap');
 
 html {
   font-size: 16px;
