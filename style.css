@@ -46,3 +46,9 @@ pre {
   border-radius: 3px;
   line-height: 1.25;
 }
+
+hr {
+  height: 1px;
+  background-color: black;
+  border-width: 0;
+}
