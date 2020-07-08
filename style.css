@@ -1,3 +1,7 @@
+@import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/roboto.min.css");
+@import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/roboto-mono.min.css");
+@import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/roboto-slab.min.css");
+
 html {
   font-size: 16px;
 }
@@ -5,7 +9,7 @@ html {
 body {
   padding: 3%;
   line-height: 1.5;
-  font-family: sans-serif;
+  font-family: 'Roboto', sans-serif;
   max-width: 60ch;
   margin: auto;
 }
@@ -25,11 +29,11 @@ footer {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: serif;
+  font-family: 'Roboto Slab', serif;
 }
 
 code {
-  font-family: monospace;
+  font-family: 'Roboto Mono', monospace;
   background: #e6e6fa;
   font-size: .8em;
 }
