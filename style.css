@@ -13,16 +13,15 @@ body {
 }
 
 img.profile {
-  width: 10em;
+  width: 7.5em;
   max-width: 100%;
   height: auto;
-  border-radius: 3px;
   margin: auto;
-  display: block;
 }
 
 header {
   text-align: right;
+  padding-bottom: 1.5em; 
 }
 
 footer {
