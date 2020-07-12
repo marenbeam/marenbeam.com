@@ -19,12 +19,8 @@ img.profile {
   border-radius: 3px;
 }
 
-.alignleft {
-    float: left;
-}
-
-.alignright {
-    float: right;
+header {
+  text-align: right;
 }
 
 footer {
