@@ -1,35 +1,25 @@
 ==================================================================
-https://keybase.io/marenbeam
+https://keybase.io/thwidge
 --------------------------------------------------------------------
 
 I hereby claim:
 
   * I am an admin of https://www.thwidge.net
-  * I am marenbeam (https://keybase.io/marenbeam) on keybase.
-  * I have a public key with fingerprint 1434 8D27 E6AC BA61 3AF1  6F5F B258 BBF1 09D9 6900
+  * I am thwidge (https://keybase.io/thwidge) on keybase.
+  * I have a public key with fingerprint B08C A771 F0E1 B8B3 CF44  04AC F3F4 5000 1C72 DCB8
 
 To do so, I am signing this object:
 
 {
   "body": {
     "key": {
-      "eldest_kid": "0101368befe142dd6fbdc9e43c3e96df47dc24446858d6c137532f983795c79058300a",
-      "fingerprint": "14348d27e6acba613af16f5fb258bbf109d96900",
+      "eldest_kid": "0120779d17cf5540831c06d0e31255427682e9e11a2bc7c3f66dc3378bbda07862620a",
+      "fingerprint": "b08ca771f0e1b8b3cf4404acf3f450001c72dcb8",
       "host": "keybase.io",
-      "key_id": "b258bbf109d96900",
-      "kid": "0101368befe142dd6fbdc9e43c3e96df47dc24446858d6c137532f983795c79058300a",
-      "uid": "6c970ed393ecb8e608619d31102cdd19",
-      "username": "marenbeam"
-    },
-    "merkle_root": {
-      "ctime": 1594724172,
-      "hash_meta": "6d9fe1601656c48c89a6c45e350a58f81c4e328fe9bc7498f44127f56c4b3e25",
-      "seqno": 16966006
-    },
-    "revoke": {
-      "sig_ids": [
-        "d956eacc9e3cf7ca965cec2d8990fdc3c34fae90be01a9cfb54091c5b55fb8a10f"
-      ]
+      "key_id": "f3f450001c72dcb8",
+      "kid": "0101fa2e0fb712de4ccade48acad60ccad410dd3939ea41e61f3a577701118e4ae5b0a",
+      "uid": "16a54fdc340e6be5391b0da566687219",
+      "username": "thwidge"
     },
     "service": {
       "hostname": "www.thwidge.net",
@@ -38,10 +28,10 @@ To do so, I am signing this object:
     "type": "web_service_binding",
     "version": 1
   },
-  "ctime": 1594724172,
+  "ctime": 1594725717,
   "expire_in": 157680000,
-  "prev": "6d14092be9b0bf484a2b85cf1361950f3b054e1ff0b34c35aabdb78d5aaa75a5",
-  "seqno": 44,
+  "prev": "9a133d558e06bd28096616f6f986ca4d469528c25f57e8661b9a1423c4fd5b70",
+  "seqno": 7,
   "tag": "signature"
 }
 
@@ -51,32 +41,36 @@ which yields the signature:
 Version: Keybase OpenPGP v2.1.13
 Comment: https://keybase.io/crypto
 
-yMK2AnicrZNbaB1FGMdzaYyJHjGIIlUE18aAlDizc9mZIwlixTY1SAuhD9VwOpdv
-kjXJ2eOeTWJIIrUShSoEpSpS0Dx5abW1ah68xZj2RdNGii8GLbEiGKwg9SUqSp09
-VPChj+7L7Oz+v//3n9/MnCo01rXWP/tUZ9+2q3uuqV9emhytKxVmeycDndiJoDgZ
-DEFtgGEL1aw0FNugGCCMMOFCgwNMQ2u509ZIoMQQkNw6GlkTUkq5YMJyg0nESOik
-IJFkJpKICYKQCrYGLi4PQFpJ43LmbTElVNgwAq6MVhwT5TB3zOmQCa0dRtJKLhHy
-hYNJNa/w4bSqQmec+G9+UqrFu4L+f849WrPjRkYILJEEjBbAkeBYWoIxCo21WObC
-KqRlNQJePaJSKGtQI8H01mAE0qFhKKVJkuV0TRbnGswkjUKKo9CvUFUHSyOQqbyR
-lT4xR5gzbqgwQio/MiAMKSacwIYCCYUDqU1EpXCU4jByuVgTCJkPUoXHyonvwCXn
-CHEfIYWxZAjy7tV4wIOrBsWHAysZB2U8FGJcZJTkzIAJrZASOWs8KOoUSKQBYSWN
-04wiiQ3TzG+TUBi5oH8675aOxaZmnu/UZQLj4+Od2eB4bAegswyZT1VJkywxybD/
-OZhllWoxZ5NNVGpq0KXLPiUdl60/Kr5iDNJqnJT9SrzyCtjg8UqcQinOFSziAvkn
-7wNjNY7Yxw2154S0o4KqUAtmnD8UWDLkiEaMAnYOaUINYUppqyNh/YuKmPoPR0p9
-TjXgPT28sspGUwimlxYf2VRX31p3VVNDfofqWluu//dmDb3UfGnqup3r8u7Wm1ZP
-nm1q+23f3ne/bNx8oGl3V8c7cGjXM3M3LDSie/d8Mf7Bn4Xj7hxam/jrtfZD84s3
-f7/p0c9Wnt/1UccvLS+u4f73w/OnLu5bgK/eO/by/VnD5jt68OzMwY/P7O/bWTzf
-svHC1H534tuVN9XFkk6X1+5r7+tqnyW/XzpRn104Pe9+HF594Lbv8LWvNB9eXPj1
-8wttaKmw5fjy1OE9ozu6P7nnjb/d9mN3dW9pKC63tZ3r3cHo9ieWn967evbG1+f/
-WP9mpmui4a2vj7q56ADcuVL54ZbejlfVkdvf7v60fePDQjT7HFnof3LWnp5rfqin
-+PN6y7Yjt/ZUNn462Lf7wZkzJ/8Bufh7zA==
-=xe57
+yMNtAnicbVJrUJRVGN5dIFzGDSJ/OIHSfDtNFsSc8913AS+N14CkiaaSmPW7nA8+
+gd1ld2EhRC7JxZKJBCRGRUckNWmcISYhGA2nBoWByUYoEDERggFh8hJXoc4y+K8/
+5533fZ/neS/n/dngpfHTPnkapwl2DDZru9prMjQWQ9UHOYRok7MJcw6RglYMSpWR
+02VJUWXCTABIAo4zyZCTFIahAU9BCbAyQBQksU9yLE8iE4JQIEWJkyiFZWWJojhe
+FGUBcDxLsiQQiDBCUa1JyGF3qFYXlhUBLwkcBxWAoMiLlKTQNKAFSaEUmgEAQIkj
+ZUnkMTHZ5vQwcHOi4EThqg3HsGNZae9/8M/7BlARSAQUkYOkjGhJEvDLC9iwwOPQ
+EMgyZaJMSKAhYqFCCQzHcQBCyCNaQIy40nfGihxkBYZW8GQ0QKyIGMoERSALDMuy
+PEdCkwfoRA6rkIYw2pXsVuUkROSGETiYqUrIs1fPIKsAt9sdvgoKtyIXZtsdNpdN
+sqXiZLLLZXeaPWRXtn0FjUTLqo5FVK0y3iRmZCKHU7VZCTPESMmleoQhY6I5kuEg
+F0agLLvqQBbVg2DwN+EtAU8dlIklTQKkKJlheARYUSZ5YGJZyCqsYuJZSaBlmjUx
+JC+RjMJwiMc5ETNokpLwEhiRA4RnsnSrjTDjSi4hCUs61SSr4Mpw4LGvt3/irdH6
+aV7w0XkuTOOnD3h+d8ZDAZqLnUuHdtmrmvoPx/N1Oq8L9weKNj6xLBVUZk1otO+W
+DXVD355/gq8+fmAn/F//xnhw27fvFGznOkf1xwZu1t1tHN698/a4tkC3bt8Or6bl
+0vD22qoTN0qLyo5qzzB/3rz7A//abLly+LfcofIf3YW/XjT4/b5flx9f2l091XU8
+hY2cOhCoa9RvPn3us5zEzoze4eB+9y+87s4XXbKVepi+afnB7jcMc90bSpSEwNvl
+ZZ9fqc8722uM+ri3o6iNzerLsN36cm3r8JvZPkdifQuD3p/vXXM69m1DrG9l7/X1
+IbWjmxZnmrbx3mLMzKnQsft5GUvLkf0PA0b/vpZsnQyqj5u70FlzuUKcjqOPtDWO
+9FX0+eVuGYvglvYP5v+bJ/gLawpD9t4D+lNXqBDdUEnztQVLxNGGce5AYE16x8mY
+wYPn5oP2fBS60P29uHj+ROO4vqglMT/7w+zoojjfl2eNc5MNz+pyql8N/e74vszh
++rXR1JZPf7pTnpoV9WjjH1Ppe2d2GImT8ZdGotJ6zjvv7XpWPfBWa/nEreKIpyPR
+X8WfObuga/YuWd9Q+8qEvW2x5evoY/MdO306I/1tmW7toLq1uDokamL7ZTOhz/kr
+8Wr+ZAJhNJWtWxx7LwqOK5U+FbNG7bCm5VLR1rTYRw2bjayxeag49sUbEY7p1pfo
+nhhy2hX0OMEwveE/ZnrFaw==
+=U1SS
 -----END PGP MESSAGE-----
 
 And finally, I am proving ownership of this host by posting or
 appending to this document.
 
-View my publicly-auditable identity here: https://keybase.io/marenbeam
+View my publicly-auditable identity here: https://keybase.io/thwidge
 
 ==================================================================
 
