@@ -2,6 +2,7 @@
 
 html {
   font-size: 16px;
+  background: #e6e6fa;
 }
 
 body {
@@ -22,7 +23,7 @@ footer {
 
 code {
   font-family: 'Roboto Mono', monospace;
-  background: #e6e6fa;
+  background: #ffffff;
   font-size: .8em;
 }
 
@@ -33,7 +34,7 @@ code:not(.block) {
 
 pre {
   overflow-x: auto;
-  background: #e6e6fa;
+  background: #ffffff;
   padding: .5em;
   border-radius: 3px;
   line-height: 1.25;
