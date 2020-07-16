@@ -23,7 +23,7 @@ footer {
 
 code {
   font-family: 'Roboto Mono', monospace;
-  background: #ffffff;
+  background: #fafae6;
   font-size: .8em;
 }
 
@@ -34,7 +34,7 @@ code:not(.block) {
 
 pre {
   overflow-x: auto;
-  background: #ffffff;
+  background: #fafae6;
   padding: .5em;
   border-radius: 3px;
   line-height: 1.25;
