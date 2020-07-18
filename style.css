@@ -2,7 +2,7 @@
 
 html {
   font-size: 16px;
-  background: #e6e6fa;
+  background: #fae6e6;
 }
 
 body {
@@ -21,9 +21,16 @@ footer {
   text-align: center;
 }
 
+main {
+  border: 1px solid;
+  box-shadow: 3px 3px;
+  background: #e6e6fa;
+  padding: 3%;
+}
+
 code {
   font-family: 'Roboto Mono', monospace;
-  background: #fafae6;
+  background: #e6fae6;
   font-size: .8em;
 }
 
@@ -34,7 +41,7 @@ code:not(.block) {
 
 pre {
   overflow-x: auto;
-  background: #fafae6;
+  background: #e6fae6;
   padding: .5em;
   border-radius: 3px;
   line-height: 1.25;
