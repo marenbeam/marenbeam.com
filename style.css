@@ -6,7 +6,7 @@ html {
 }
 
 body {
-  padding: .5em;
+  padding: 1em;
   line-height: 1.5;
   font-family: 'Inter', sans-serif;
   max-width: 60ch;
@@ -25,7 +25,7 @@ main {
   border: 1px solid;
   box-shadow: 3px 3px;
   background: #e6e6fa;
-  padding: .5em;
+  padding: 1em;
 }
 
 code {
@@ -42,7 +42,7 @@ code:not(.block) {
 pre {
   overflow-x: auto;
   background: #e6fae6;
-  padding: .5em;
+  padding: 1em;
   border-radius: 3px;
   line-height: 1.25;
 }
