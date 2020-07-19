@@ -35,7 +35,7 @@ code {
 }
 
 code:not(.block) {
-  padding: .5em .5em;
+  padding: .2em .2em;
   border-radius: 3px;
 }
 
