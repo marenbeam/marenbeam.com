@@ -22,7 +22,8 @@ footer {
 }
 
 main {
-  border: 1px solid;
+  border-style: solid;
+  border-width: 1px;
   background: #e6e6fa;
   padding: 1em;
 }
