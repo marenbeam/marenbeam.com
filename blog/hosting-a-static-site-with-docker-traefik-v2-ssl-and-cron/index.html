@@ -1,17 +1,30 @@
 <!doctype html>
 <html>
 <head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-177768529-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-177768529-1');
+</script>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="../../style.css"> 
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/styles/tomorrow.min.css">
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
 <title>Blog - Maren Beam</title>
 </head>
 <body>
-<header><a href="/">Home</a></header>
+<header><p><a href="/">Home</a> | <a href="/blog">Blog</a> | <a href="/thoughts">Thoughts</a> | <a href="/contact">Contact</a></p></header>
+<hr>
 <main>
 
-<h1>Hosting a Static Site with Docker, Traefik v2, SSL, and Cron</h1>
-<p><b>Maren Beam &mdash; May 31, 2020</b></p>
+<h1>hosting a static site with docker, traefik v2, ssl, and cron</h1>
+<p><strong><em>Maren Beam &mdash; May 31, 2020</em></strong></p>
 
 <p>I hope this post might be helpful for someone using Traefik for the first time, someone moving from Traefik v1 to v2, or someone who's getting familiar with Docker compose.</p>
 
@@ -43,13 +56,13 @@
 
 <p>SSH into the host and decide where you want all your Docker service configurations to live. I put mine in <code>~/docker</code>. They could all go in one <code>docker-compose.yaml</code> file, but I put mine in different directories because I have unrelated services running on the same host. If you adhere to this framework, then you'll want a parent folder for everything, a folder for the ingress controller configuration, a folder for the website configuration, and a subfolder for the source code of the website itself.</p>
 
-<pre><code class="block">$ mkdir -p ~/docker/traefik
+<pre><code class="shell">$ mkdir -p ~/docker/traefik
 $ mkdir -p ~/docker/mywebsite.com/site
 </code></pre>
 
 <p>And for our last piece of host-setup, we need to enable swarm mode and create a Docker network for our services to use.</p>
 
-<pre><code class="block">$ docker swarm init
+<pre><code class="shell">$ docker swarm init
 $ docker network create --driver overlay proxy
 </code></pre>
 
@@ -57,7 +70,7 @@ $ docker network create --driver overlay proxy
 
 <p>One way to deploy swarm services is to write a <code>docker-compose.yaml</code> configuration for each service, and then deploy them with <code>docker stack deploy</code>. This is well-supported in the docker documentation, so it's what we're going to do.</p>
 
-<pre><code class="block">$ vim ~/docker/traefik/docker-compose.yaml
+<pre><code class="shell">$ vim ~/docker/traefik/docker-compose.yaml
 </code></pre>
 
 <p>Now we can really start doing stuff!</p>
@@ -66,7 +79,7 @@ $ docker network create --driver overlay proxy
 
 <p>First we're going to set up Traefik. Paste this configuration into the file you just opened, and edit as necessary for your use case. At the very least, you'll need to change the email address. I've included comments explaining most lines.</p>
 
-<pre><code class="block">version: "3"
+<pre><code class="yaml">version: "3"
 
 services:
   traefik:
@@ -147,7 +160,7 @@ networks:
 
 <p>Before starting Traefik, let's create and set permissions for the <code>acme.json</code> file where our certificates will be stored. This file will be full of mission-critical secrets, so it's important to do this right.</p>
 
-<pre><code class="block">$ touch ~/docker/traefik/acme.json
+<pre><code class="shell">$ touch ~/docker/traefik/acme.json
 $ chmod 600 ~/docker/traefik/acme.json
 </code></pre>
 
@@ -155,7 +168,7 @@ $ chmod 600 ~/docker/traefik/acme.json
 
 <p>One thing that Traefik has is <a href="https://docs.traefik.io/v2.0/operations/dashboard/">a fancy dashboard</a>. For clarity of configuration, we've not set that up. Since we've not set that up, and we haven't deployed our website yet, we don't have a good way to test our setup at the moment. The best you can do is deploy Traefik and then check to see if it's running. We're deploying with <code>docker stack deploy</code> because this is a swarm service.</p>
 
-<pre><code class="block">$ docker stack deploy --compose-file ~/docker/traefik/docker-compose.yaml traefik
+<pre><code class="shell">$ docker stack deploy --compose-file ~/docker/traefik/docker-compose.yaml traefik
 $ docker container ls
 </code></pre>
 
@@ -167,12 +180,12 @@ $ docker container ls
 
 <p>First let's work on the Docker service configuration. Open a new compose file:</p>
 
-<pre><code class="block">$ vim ~/docker/mywebsite.com/docker-compose.yaml
+<pre><code class="shell">$ vim ~/docker/mywebsite.com/docker-compose.yaml
 </code></pre>
 
 <p>And paste in the following configuration. Again, edit as necessary for your use case:</p>
 
-<pre><code class="block">version: '3'
+<pre><code class="yaml">version: '3'
 
 services:
   nginx:
@@ -210,18 +223,18 @@ networks:
 
 <p><i>Now</i> we can do a quick test to see whether everything's working up to this point.</p>
 
-<pre><code class="block">$ echo 'hello world' &gt; ~/docker/mywebsite.com/site/index.html
+<pre><code class="shell">$ echo 'hello world' &gt; ~/docker/mywebsite.com/site/index.html
 $ docker stack deploy --compose-file ~/docker/mywebsite/docker-compose.yaml mywebsite
 </code></pre>
 
 <p>Wait for 30 seconds, just for good measure.  Consider making some tea! Then, visit <code>mywebsite.com</code> in a browser, or on your local machine:</p>
 
-<pre><code class="block">$ curl https://mywebsite.com
+<pre><code class="shell">$ curl https://mywebsite.com
 </code></pre>
 
 <p>If you get a response (or a page) containing only <code>hello world</code> -- success!</p>
 
-<p>Now we can do the last step: setting up automatic deployments with GitHub and cron. If you don't already have a static site you'd like to use for this, you can use <a href="https://github.com/marenbeam/mynamedotcom">this template</a> to start with.</p>
+<p>Now we can do the last step: setting up automatic deployments with GitHub and cron. If you don't already have a static site you'd like to use for this, you can use <a href="https://github.com/thwidge/mynamedotcom">this template</a> to start with.</p>
 
 <h3>Automatic Deployment</h3>
 
@@ -235,20 +248,20 @@ $ docker stack deploy --compose-file ~/docker/mywebsite/docker-compose.yaml mywe
 
 <p>We're going to use a cron job running on the host to achieve this. This is a pretty funny combination of new computer (traefik, swarm mode, etc.), and old computer (cron). But do <i>you</i> want to set up a whole CI pipeline for a personal, static website? Me neither! I think cron is perfect for something like this.</p>
 
-<p>We're going to skip over creating a new repo and just work with <a href="https://github.com/marenbeam/mynamedotcom">this template</a> which you should absolutely feel free to use for your own website!</p>
+<p>We're going to skip over creating a new repo and just work with <a href="https://github.com/thwidge/mynamedotcom">this template</a> which you should absolutely feel free to use for your own website!</p>
 
 <p>Assuming you've forked my repo, or are otherwise set up with a git repo you'd like to use, now we just need to set up a cron job on our host that'll pull the repo each hour and copy it into <code>~/docker/mywebsite.com/site</code> for Nginx to serve.</p>
 
 <p>First, SSH into the host. Then:</p>
 
-<pre><code class="block">$ mkdir ~/cronjobs
+<pre><code class="shell">$ mkdir ~/cronjobs
 $ mkdir ~/.mywebsite.com
 $ vim ~/cronjobs/update-my-website-dot-com.sh
 </code></pre>
 
 <p>In the file you just opened, paste the following:</p>
 
-<pre><code class="block">#!/bin/bash
+<pre><code class="bash">#!/bin/bash
 cd ~/.mywebsite.com/mywebsite.com
 git pull
 # we only want to give nginx the files that we actually want to serve.
@@ -260,38 +273,38 @@ rsync -a --delete --exclude '.*' --exclude 'README.md' --exclude 'LICENSE' . ~/d
 
 <p>Make the update script executable, and for good measure be sure <code>rsync</code> and <code>git</code> are installed:</p>
 
-<pre><code class="block">$ chmod +x ~/cronjobs/update-my-website-dot-com.sh
+<pre><code class="shell">$ chmod +x ~/cronjobs/update-my-website-dot-com.sh
 $ sudo apt update
 $ sudo apt install rsync git
 </code></pre>
 
 <p>Now get the repo onto the host, and into the right place -- we only have to do this once.</p>
 
-<pre><code class="block">$ cd ~/.mywebsite.com
-$ git clone https://github.com/marenbeam/mynamedotcom.git
+<pre><code class="shell">$ cd ~/.mywebsite.com
+$ git clone https://github.com/thwidge/mynamedotcom.git
 </code></pre>
 
 <p>Run the update script once manually to sync the repo right now:</p>
 
-<pre><code class="block">$ ~/cronjobs/update-my-website-dot-com.sh
+<pre><code class="shell">$ ~/cronjobs/update-my-website-dot-com.sh
 </code></pre>
 
 <p>Finally, cron it:</p>
 
-<pre><code class="block">$ crontab -e
+<pre><code class="shell">$ crontab -e
 </code></pre>
 
 <p>And in that file add the line:</p>
 
-<pre><code class="block">@hourly ~/cronjobs/update-my-website-dot-com.sh
+<pre><code class="plaintext">@hourly ~/cronjobs/update-my-website-dot-com.sh
 </code></pre>
 
-<p>And that's it! You've now got a single node Docker swarm cluster; Traefik accepting incoming requests, routing them to the appropriate service, and programmatically handling SSL provisioning and termination; an Nginx container serving your static site over HTTPS; and a simple cron job reliably syncing and deploying all changes merged to <code>master</code> at the top of each hour.</p>
+<p>And that's it! You've now got a single node Docker swarm cluster; Traefik accepting incoming requests, routing them to the appropriate service, and programmatically handling SSL provisioning and termination; an Nginx container serving your static site over HTTPS; and a simple cron job reliably syncing and deploying all changes merged to the main branch at the top of each hour.</p>
 
 </main>
+<hr>
 <footer>
 <p><a href="/">Home</a> | <a href="/blog">Blog</a> | <a href="/thoughts">Thoughts</a> | <a href="/contact">Contact</a></p>
-
 <p><script async defer src="https://www.recurse-scout.com/loader.js?t=9ba46999660e9e2af4e35e19d38328d1"></script></p>
 </footer>
 </body>

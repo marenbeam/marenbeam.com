@@ -1,54 +1,61 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto+Mono&display=swap');
 
 html {
+  background: seashell;
   font-size: 16px;
-  background: #fae6e6;
 }
 
 body {
-  padding: 1em;
+  font-family: "Inter", serif;
+  color: #333;
+  margin: 0 auto;
+  max-width: 50em;
   line-height: 1.5;
-  font-family: 'Inter', sans-serif;
-  max-width: 60ch;
-  margin: auto;
+  padding: 1em;
 }
 
-header {
-  text-align: right;
-}
-
-footer {
+header, footer {
   text-align: center;
-}
-
-main {
-  border-style: solid;
-  border-width: 1px;
-  background: #e6e6fa;
-  padding: 1em;
-}
-
-code {
-  font-family: 'Roboto Mono', monospace;
-  background: #e6fae6;
-  font-size: .8em;
-}
-
-code:not(.block) {
-  padding: .2em .2em;
-  border-radius: 3px;
-}
-
-pre {
-  overflow-x: auto;
-  background: #e6fae6;
-  padding: 1em;
-  border-radius: 3px;
-  line-height: 1.25;
 }
 
 hr {
   height: 1px;
-  background-color: black;
+  background-color: #999;
   border-width: 0;
+}
+
+h2, h3, h4, h5, h6 {
+  margin-top: 1em;
+  padding-top: 1em;
+  color: #111;
+}
+
+h1 {
+  font-style: italic;
+  font-size: 5em;
+  color: darkgreen;
+  word-break: break-all;
+}
+
+strong {
+  color: #111;
+}
+
+code {
+  font-size: .8em;
+  font-family: "Roboto Mono", monospace;
+}
+
+pre {
+  margin: 1em 1em 2em 1em;
+  overflow-x: auto;
+  line-height: 1.25;
+  border-style: solid;
+  border-radius: 3px;
+  border-width: 1px;
+  border-color: #999;
+}
+
+a {
+  color: green;
 }
